@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Music Store</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="dashboard-container">
+    <header class="dashboard-header">
+        <h1><i class="fas fa-music"></i> Music Store Dashboard</h1>
+        <div class="user-info">
+            <div class="user-details">
+                <span>Welcome, <strong th:text="${adminName}"></strong></span>
+                <small class="user-role" th:text="${adminRole}"></small>
+            </div>
+            <a th:href="@{/logout}" class="btn btn-logout">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </header>
+
+    <main class="dashboard-content">
+        <div class="welcome-card">
+            <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
+            <p>Welcome to the Music Store administration panel.</p>
+            <p>You are successfully logged in as an administrator.</p>
+        </div>
+
+        <div class="dashboard-cards">
+            <div class="card">
+                <i class="fas fa-compact-disc"></i>
+                <h3>Manage Albums</h3>
+                <p>Add, edit, or remove albums</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-guitar"></i>
+                <h3>Manage Instruments</h3>
+                <p>Handle instrument inventory</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h3>Customer Management</h3>
+                <p>View and manage customers</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Sales Reports</h3>
+                <p>View sales analytics</p>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>
